@@ -1,11 +1,15 @@
 return {
 	{
-		"iamcco/markdown-preview.nvim",
-		lazy = false,
-	},
-	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		lazy = false,
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-mini/mini.icons",
+			"nvim-tree/nvim-web-devicons",
+		},
+		---@module 'render-markdown'
+		---@type render.md.UserConfig
+		opts = {},
 	},
 	{
 		"folke/todo-comments.nvim",
