@@ -1,16 +1,18 @@
 return {
-    {
-        "oxfist/night-owl.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require("night-owl").setup()
-        end,
-    },
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "night-owl",
-        },
-    },
+	{
+		"sainnhe/gruvbox-material",
+		lazy = false,
+		priority = 1000,
+		init = function()
+			vim.g.gruvbox_material_background = "hard"
+			vim.g.gruvbox_material_foreground = "mix"
+			vim.g.gruvbox_material_better_performance = 1
+		end,
+	},
+	{
+		"LazyVim/LazyVim",
+		opts = {
+			colorscheme = "gruvbox-material",
+		},
+	},
 }
